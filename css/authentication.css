@@ -1,110 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-	margin: 0;
-	padding: 0;
-	font-family: lato;
+    font-family: 'Hind', sans-serif;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 1.5rem;
 }
 
-.main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	width: 100vw;
-	background-color: #e5e5e5;
-}
-.section {
-	background-color: #ffffff;
-	text-align: center;
-	box-shadow: 0px 7.52055px 16.7123px rgba(171, 180, 189, 0.23);
-	border-radius: 10px;
-	padding: 50px;
-}
-.logo {
-	width: 99px;
-}
-.login_text {
-	font-style: normal;
-	font-weight: bold;
-	font-size: 24px;
-	line-height: 33px;
-	text-align: center;
 
-	color: #1d2029;
-}
-.login_text_instruction {
-	font-size: 18px;
-	text-align: center;
-
-	color: #abb4bd;
+.fega-main-container {
+    max-width: 886px;
+    width: 100%;
+    height: 587px;
+    background: #F4F4F4;
+    color: #000000;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
 }
 
-.login_buttons {
-	display: flex;
-	justify-content: center;
-}
-.facebook_login,
-.google_login {
-	width: 200px;
-	height: 50px;
-	background: #ffffff;
-	border: 1px solid rgba(171, 180, 189, 0.345873);
-	box-shadow: 0px 10px 20px rgba(171, 180, 189, 0.211617);
-	border-radius: 4px;
-	margin: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
+@media screen and (max-width: 567px) {
+    .fega-main-container {
+        height: 500px;
+    }
 }
 
-.facebook_login > img,
-.google_login > img {
-	margin-right: 10px;
+/* To get the second theme;
+this is the only styling it needs */
+.fega-main-container.dark-theme {
+    background: #07223E;
+    color: #ffffff;
+}
+/* ================================== */
+
+.fega-content-container {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
 }
 
-.facebook_login:hover,
-.google_login:hover {
-	border: 2px solid #0769c3;
+.fega-content-container h1 {
+    font-size: 1.5rem;
 }
 
-.privacy_policy {
-	font-size: 14px;
-	line-height: 31px;
-	color: #abb4bd;
-}
-.policy {
-	color: #0769c3;
-}
-.policy a {
-	text-decoration: none;
-}
-.policy a:visited {
-	color: #0769c3;
+.fega-content-container p {
+    margin-top: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-@media (max-width: 638px) {
-	.section {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		width: 100%;
-		padding: 0;
-		border-radius: 0;
-	}
 
-	.logo {
-		margin: 30px auto;
-	}
+.auth-btns {
+    margin-top: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
 
-	.login_buttons {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-	}
-	.google_login,
-	.facebook_login {
-		margin: 0.5rem;
-		align-self: center;
-		width: 80%;
-	}
+.auth-btns button {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-btns button svg {
+    margin-right: .25rem;
+}
+
+.auth-btns button:hover {
+    opacity: .7;
+}
+
+.auth-btns button.google-btn {
+    background: #FFFFFF;
+    color: #656565;
+    border: 1px solid #656565;
+}
+
+.auth-btns button.facebook-btn {
+    background: #385C8E;
+    color: #ffffff;
+}
+
+p.demarcation-or {
+    color: #c4c4c4;
+    padding: 1.2rem 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.demarcation-or::before, .demarcation-or::after {
+    content: "";
+    display: inline-block;
+    width: 135px;
+    border: .65px solid #C4C4C4;
+}
+
+@media screen and (max-width: 567px) {
+    .demarcation-or::before, .demarcation-or::after {
+        width: 100px;
+    }
+}
+a.f {
+
+color: white;
+}
+a {
+  text-decoration: none;
+text-decoration-color: white;
 }
